@@ -1,0 +1,36 @@
+#badgelist {
+    padding: 6px 0px;
+}
+.category-badge, .addCartButton {
+    padding: 3px 6px;
+    margin-right: 8px;
+    margin-left: 1px;
+    font-size: 75%;
+    color: #212529;
+    border-radius: 6px;
+    box-shadow: 0 0 3px #ddd;
+    white-space: nowrap;
+    background-color: #ffc107;
+}
+
+.category-badge:hover, .addCartButton:hover{
+    cursor: pointer;
+    opacity: 50%;
+}
+
+.category-badge-clicked {
+    padding: 3px 6px;
+    margin-right: 8px;
+    margin-left: 1px;
+    font-size: 75%;
+    color: #212529;
+    border-radius: 6px;
+    box-shadow: 0 0 3px #ddd;
+    white-space: nowrap;
+    background-color: #818181;
+}
+
+.category-badge-clicked:hover {
+    cursor: pointer;
+    opacity: 50%;
+}

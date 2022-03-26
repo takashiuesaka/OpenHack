@@ -16,3 +16,19 @@ html {
 .box-shadow {
   box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
+
+.modal-header {
+  background-color: #337AB7;
+  padding:16px 16px;
+  color:#FFF;
+  border-bottom:2px dashed #337AB7;
+}
+
+.modal-content {
+  height: 60%;
+  background-color:#ffffff;
+}
+
+.modal-open {
+  padding-right: 0px !important;
+}
