@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Card, CardBody, CardImg, CardTitle, CardText, CardGroup, Row, Col } from 'reactstrap'
+import { Card, CardBody, CardImg, CardTitle, CardText, CardGroup, Container, Row, Col } from 'reactstrap'
 import { Category } from './Category'
 import { ShoppingCart } from './ShoppingCart'
 import { cartDetailType } from './ShoppingCartDetail'
@@ -61,6 +61,186 @@ export const Home: React.VFC = () => {
         unitPrice: 182,
         currencySign: '\\',
         description: 'Made in Gunma/Ibaraki'
+      },
+      {
+        id: 'asparagus',
+        name: 'Asparagus',
+        imagePath: 'asparagus.jpg',
+        unitName: '1-pack',
+        unitPrice: 104,
+        currencySign: '\\',
+        description: 'Made in Mexico'
+      },
+      {
+        id: 'bell-pepper',
+        name: 'Bell Pepper',
+        imagePath: 'bell-pepper.jpg',
+        unitName: '1 bell pepper',
+        unitPrice: 170,
+        currencySign: '\\',
+        description: 'Made in Koria/New zealand/Holland'
+      },
+      {
+        id: 'blackcoffee',
+        name: 'Black Coffee',
+        imagePath: 'blackcoffee.png',
+        unitName: '1 Black Coffee',
+        unitPrice: 105,
+        currencySign: '\\',
+        description: 'Made in Japan'
+      },
+      {
+        id: 'celery',
+        name: 'Celery',
+        imagePath: 'celery.jpg',
+        unitName: '1 Celery',
+        unitPrice: 146,
+        currencySign: '\\',
+        description: 'Made in Sizuoka/Aichi'
+      },
+      {
+        id: 'cola',
+        name: 'Cola',
+        imagePath: 'cola.png',
+        unitName: '1 Bottle',
+        unitPrice: 116,
+        currencySign: '\\',
+        description: 'Made in Japan'
+      },
+      {
+        id: 'eggplant',
+        name: 'Eggplant',
+        imagePath: 'eggplant.jpg',
+        unitName: '3-pack',
+        unitPrice: 205,
+        currencySign: '\\',
+        description: 'Made in Kouchi'
+      },
+      {
+        id: 'loin',
+        name: 'Loin',
+        imagePath: 'loin.jpg',
+        unitName: '1-pack, 300g',
+        unitPrice: 1025,
+        currencySign: '\\',
+        description: 'Made in Japan'
+      },
+      {
+        id: 'milktea',
+        name: 'Milk Tea',
+        imagePath: 'milktea.png',
+        unitName: '1 Bottle',
+        unitPrice: 108,
+        currencySign: '\\',
+        description: 'Made in Japan'
+      },
+      {
+        id: 'onion',
+        name: 'Onion',
+        imagePath: 'onion.jpg',
+        unitName: '1 onion',
+        unitPrice: 112,
+        currencySign: '\\',
+        description: 'Made in Hokkaido'
+      },
+      {
+        id: 'orangejuice',
+        name: 'Orange Juice',
+        imagePath: 'orangejuice.png',
+        unitName: '1 Bottle',
+        unitPrice: 108,
+        currencySign: '\\',
+        description: 'Made in Japan'
+      },
+      {
+        id: 'potato',
+        name: 'Potato',
+        imagePath: 'potato.jpg',
+        unitName: '1 potato',
+        unitPrice: 89,
+        currencySign: '\\',
+        description: 'Made in Hokkaido'
+      },
+      {
+        id: 'pumpkin',
+        name: 'Pumpkin',
+        imagePath: 'pumpkin.jpg',
+        unitName: '1 pumpkin',
+        unitPrice: 512,
+        currencySign: '\\',
+        description: 'Made in New zealand'
+      },
+      {
+        id: 'radish',
+        name: 'Radish',
+        imagePath: 'radish.jpg',
+        unitName: '1 radish',
+        unitPrice: 205,
+        currencySign: '\\',
+        description: 'Made in Kanagawa'
+      },
+      {
+        id: 'shallot',
+        name: 'Shallot',
+        imagePath: 'shallot.jpg',
+        unitName: '1 shallot',
+        unitPrice: 115,
+        currencySign: '\\',
+        description: 'Made in Tochigi'
+      },
+      {
+        id: 'shank',
+        name: 'Shank',
+        imagePath: 'shank.jpg',
+        unitName: '1-pack 300g',
+        unitPrice: 490,
+        currencySign: '\\',
+        description: 'Made in Japan'
+      },
+      {
+        id: 'sirloin',
+        name: 'Sirloin',
+        imagePath: 'sirloin.jpg',
+        unitName: '1-pack 300g',
+        unitPrice: 1580,
+        currencySign: '\\',
+        description: 'Made in Japan'
+      },
+      {
+        id: 'sodadrink',
+        name: 'Sodadrink',
+        imagePath: 'sodadrink.png',
+        unitName: '1-Bottle',
+        unitPrice: 78,
+        currencySign: '\\',
+        description: 'Made in Japan'
+      },
+      {
+        id: 'sportsdrink',
+        name: 'Sports Drink',
+        imagePath: 'sportsdrink.png',
+        unitName: '1-Bottle',
+        unitPrice: 88,
+        currencySign: '\\',
+        description: 'Made in Japan'
+      },
+      {
+        id: 'tongue',
+        name: 'Tongue',
+        imagePath: 'tongue.jpg',
+        unitName: '1-pack 300g',
+        unitPrice: 3800,
+        currencySign: '\\',
+        description: 'Made in Japan'
+      },
+      {
+        id: 'water',
+        name: 'Water Bottle',
+        imagePath: 'water.png',
+        unitName: '1-Bottle',
+        unitPrice: 68,
+        currencySign: '\\',
+        description: 'Made in Japan'
       }
     ])
 
@@ -95,45 +275,33 @@ export const Home: React.VFC = () => {
       </Row>
       <div id='badgelist'>
         <Category onClick={clickCategory}>Vegetable</Category>
-        <Category onClick={clickCategory}>Fish</Category>
+        <Category onClick={clickCategory}>Fruit</Category>
         <Category onClick={clickCategory}>Meat</Category>
-        <Category onClick={clickCategory}>Frozen food</Category>
         <Category onClick={clickCategory}>Beverage</Category>
-        <Category onClick={clickCategory}>Bread</Category>
-        <Category onClick={clickCategory}>Side dish</Category>
       </div>
-      <CardGroup>
-        {goods.map((value, index) => {
-          return (
-            <Card key={value.id}>
-              <CardImg alt={value.name} src={value.imagePath} top width="100%" />
-              <CardBody>
-                <CardTitle tag="h5">{value.name}</CardTitle>
-                <CardText>{value.unitName} {value.currencySign}{value.unitPrice}</CardText>
-                <CardText className='text-center'><button className='addCartButton' onClick={() => addToCart(value)}>Add to cart</button></CardText>
-                <CardText>
-                  <small className="text-muted">
-                    {value.description}
-                  </small>
-                </CardText>
-              </CardBody>
-            </Card>
-          )
-        })}
-      </CardGroup>
-      <p>Welcome to your new single-page application, built with:</p>
-      <ul>
-        <li><a href='https://get.asp.net/'>ASP.NET Core</a> and <a href='https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx'>C#</a> for cross-platform server-side code</li>
-        <li><a href='https://facebook.github.io/react/'>React</a> for client-side code</li>
-        <li><a href='http://getbootstrap.com/'>Bootstrap</a> for layout and styling</li>
-      </ul>
-      <p>To help you get started, we have also set up:</p>
-      <ul>
-        <li><strong>Client-side navigation</strong>. For example, click <em>Counter</em> then <em>Back</em> to return here.</li>
-        <li><strong>Development server integration</strong>. In development mode, the development server from <code>create-react-app</code> runs in the background automatically, so your client-side resources are dynamically built on demand and the page refreshes when you modify any file.</li>
-        <li><strong>Efficient production builds</strong>. In production mode, development-time features are disabled, and your <code>dotnet publish</code> configuration produces minified, efficiently bundled JavaScript files.</li>
-      </ul>
-      <p>The <code>ClientApp</code> subdirectory is a standard React application based on the <code>create-react-app</code> template. If you open a command prompt in that directory, you can run <code>npm</code> commands such as <code>npm test</code> or <code>npm install</code>.</p>
+      <Container fluid>
+        <Row className='row-cols-2 row-cols-md-4 row-cols-xl-6'>
+          {goods.map((value, index) => {
+            return (
+              <Col key={index}>
+                <Card>
+                  <CardImg alt={value.name} src={value.imagePath} top width="100%" />
+                  <CardBody>
+                    <CardTitle tag="h5">{value.name}</CardTitle>
+                    <CardText>{value.unitName} {value.currencySign}{value.unitPrice}</CardText>
+                    <CardText className='text-center'><button className='addCartButton' onClick={() => addToCart(value)}>Add to cart</button></CardText>
+                    <CardText>
+                      <small className="text-muted">
+                        {value.description}
+                      </small>
+                    </CardText>
+                  </CardBody>
+                </Card>
+              </Col>
+            )
+          })}
+        </Row>
+      </Container>
     </div>
   );
 }
