@@ -5,17 +5,20 @@ import { Home } from './components/Home';
 import { Checkout } from './components/Checkout'
 import { FetchData } from './components/FetchData';
 import { Counter } from './components/Counter';
+import { ShoppingCartProvider } from './components/ShoppingCartState'
 
 import './custom.css'
 
 const App = () => {
     return (
-        <Layout>
-            <Route exact path='/' component={Home} />
-            <Route path='/counter' component={Counter} />
-            <Route path='/fetch-data' component={FetchData} />
-            <Route path='/checkout' component={Checkout} />
-        </Layout>
+        <ShoppingCartProvider>
+            <Layout>
+                <Route exact path='/' component={Home} />
+                <Route path='/counter' component={Counter} />
+                <Route path='/fetch-data' component={FetchData} />
+                <Route path='/checkout' component={Checkout} />
+            </Layout>
+        </ShoppingCartProvider>
     );
 }
 
