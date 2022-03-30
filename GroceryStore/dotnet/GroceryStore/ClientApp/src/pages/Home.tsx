@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Card, CardBody, CardImg, CardTitle, CardText, Container, Row, Col } from 'reactstrap'
-import { Category, categoryState } from './Category'
-import { ShoppingCart } from './ShoppingCart'
-// import { cartDetailType } from './ShoppingCartDetail'
-import { useShoppingCart } from './ShoppingCartState'
+import { Category, categoryState } from '../components/Category'
+import { ShoppingCart } from '../components/ShoppingCart'
+import { useShoppingCart } from '../components/ShoppingCartState'
 import './Home.css'
 
 export const Home: React.VFC = () => {
 
-  // const [goodsToShoppingCart, setGoodsToShoppingCart] = useState<cartDetailType[]>([])
   const [goods, setGoods] = useState<goodsType[]>([])
   const [categories, setCategories] = useState<categoryState[]>([])
   const shoppingCart = useShoppingCart()

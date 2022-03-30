@@ -20,7 +20,10 @@ export const NavMenu = () => {
           <Collapse className="d-sm-inline-flex flex-sm-row-reverse" isOpen={collapsed} navbar>
             <ul className="navbar-nav flex-grow">
               <NavItem>
-                <NavLink tag={Link} className="text-primary" to="#">Login</NavLink>
+                <NavLink tag={Link} className="text-primary" to="/signup">Signup</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink tag={Link} className="text-primary" to="/login">Login</NavLink>
               </NavItem>
               {/* <NavItem>
                 <NavLink tag={Link} className="text-primary" to="/counter">Counter</NavLink>
