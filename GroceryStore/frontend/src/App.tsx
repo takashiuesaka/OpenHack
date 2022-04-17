@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router';
+import { Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import { Home } from './pages/Home';
 import { Signup } from './pages/signup'
@@ -11,14 +11,14 @@ import { ShoppingCartProvider } from './components/ShoppingCartState'
 
 import './custom.css'
 
-const App = () => {
+const App: React.VFC = () => {
     return (
         <ShoppingCartProvider>
             <Layout>
-                <Route exact path='/' component={Home} />
+                <Route exact={true} path='/' component={Home} />
                 <Route exact path='/signup' component={Signup} />
                 <Route exact path='/login' component={Login} />
-                <Route path='/checkout' component={Checkout} />
+                <Route exact path='/checkout' component={Checkout} />
                 {/* <Route path='/counter' component={Counter} /> */}
                 {/* <Route path='/fetch-data' component={FetchData} /> */}
             </Layout>

@@ -4,7 +4,7 @@ const formStyle = {
     padding: '6px 6px'
 }
 
-export const Signup = () => {
+export const Signup: React.VFC = () => {
     return (
         <div>
             <Row>
